@@ -41,4 +41,10 @@ Rails.application.configure do
 
   #config.action below needed for the devise gem and heroku
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  #installing these lines to try to resolve an error whith Paperclip not identifying
+  #a command and asking me to install ImageMagik, which I already have done. 
+
+  Paperclip.options[:command_path] = "/opt/ImageMagick/bin/"
+
 end
