@@ -79,7 +79,7 @@ Rails.application.configure do
 
   #config.action below needed for the devise gem and heroku 
   #make sure you set this to your actual host
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'http://jds-pics.herokuapp.com/' }
 
   # Sets paperclip to upload images to amazon S3
   config.paperclip_defaults = {
