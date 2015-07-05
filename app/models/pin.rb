@@ -7,6 +7,8 @@ class Pin < ActiveRecord::Base
 
 	#adding this to the file in response to an error in production.
 	#Paperclip::Error (Pin model missing required attr_accessor for 'image_file_name'):
-	attr_accessor :image_file_name#
+	#Commenting this out for now to see if this helps fix the problem of image file names not loading.
+	#attr_accessor :image_file_name
 	
+
 end
