@@ -82,10 +82,11 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'http://jds-pics.herokuapp.com/' }
 
   # Sets paperclip to upload images to amazon S3
+  #I'm changing the bucket name from 'S3_BUCKET_NAME' TO 'AWS_BUCKET' because that is what that matches the Heroku config name and the demo code in the lesson. Not sure where I got the other line.
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['S3_BUCKET_NAME'],
+    :bucket => ENV['AWS_BUCKET'],
     :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
